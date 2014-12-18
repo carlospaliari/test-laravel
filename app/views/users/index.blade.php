@@ -15,9 +15,6 @@
 				<th>Ajustes</th>
 			</tr>
 		</thead>
-		<div class="container">
-            <a onclick="alert('Desculpe mas esta funcao ainda nao foi desenvolvida')"></a>
-		</div>
 
 		<tbody>
 			@foreach ($users as $user)

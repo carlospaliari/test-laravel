@@ -191,9 +191,9 @@ return array(
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
         'Alert'             => 'Prologue\Alerts\Facades\Alert',
-        'Prologue\Alerts\AlertsServiceProvider',
 
 	),
+    'Prologue\Alerts\AlertsServiceProvider',
 
 
 );
