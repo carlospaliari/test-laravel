@@ -22,7 +22,7 @@
 					<td>{{{ $user->email }}}</td>
 					<td>{{{ $user->password = Hash::make('secret')}}}</td>
                     <td>
-                        {{ Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'route' => array('users.destroy', $user->id,))) }}
+                        {{ Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'route' => array('users.destroy', $user->id))) }}
                             {{ Form::submit('Delete', array('class' => 'btn btn-danger')) }}
                         {{ Form::close() }}
                         {{ link_to_route('users.edit', 'Edit', array($user->id), array('class' => 'btn btn-info'))  }}
