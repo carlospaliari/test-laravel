@@ -3,7 +3,7 @@
 @section('main')
 
 <div class="row">
-    <div class="col-md-10 col-md-offset-2">
+    <div class="col-md-2 col-md-offset-2">
         <h1>Edit User</h1>
 
         @if ($errors->any())
@@ -15,6 +15,7 @@
         @endif
     </div>
 </div>
+
 
 {{ Form::model($user, array('class' => 'form-horizontal', 'method' => 'PATCH', 'route' => array('users.update', $user->id))) }}
 
@@ -34,11 +35,18 @@
 
 
 <div class="form-group">
-    <label class="col-sm-2 control-label">&nbsp;</label>
-    <div class="col-sm-10">
+
+    <div class="col-md-1 col-md-offset-2">
       {{ Form::submit('Update', array('class' => 'btn btn-lg btn-primary')) }}
-      {{ link_to_route('users.show', 'Cancel', $user->id, array('class' => 'btn btn-lg btn-default')) }}
     </div>
+    <div class="col-md-1">
+        {{ link_to_route('users.show', 'Cancel', $user->id, array('class' => 'btn btn-lg btn-default')) }}
+    </div>
+
+    <div class="col-md-offset-10">
+        <p>{{ link_to_route('users.index', 'Return to All users', null, array('class'=>'btn btn-lg btn-primary')) }}</p>
+    </div>
+
 </div>
 
 {{ Form::close() }}
