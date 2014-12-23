@@ -7,7 +7,7 @@
 <p>{{ link_to_route('users.create', 'Add New User', null, array('class' => 'btn btn-lg btn-success')) }}</p>
 
 @if ($users->count())
-	<table class="table table-striped">
+  	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>Email</th>
@@ -35,5 +35,4 @@
 @else
 	There are no users
 @endif
-
 @stop
